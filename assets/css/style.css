@@ -557,7 +557,7 @@ body {
   #FOOTER
 \*-----------------------------------*/
 
-.footer { color: var(--cadet-blue-creyola); }
+.footer { color: var(--international-orange-engineering); }
 
 .footer .shape { display: none; }
 
@@ -622,9 +622,35 @@ body {
 .copyright {
   text-align: center;
   font-size: var(--fs-6);
+  color: white;
+  
+  background: transparent;
 }
 
+.btn-prods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  color: white;
+  background-color: #64a971; /* light pink background */
+  border: none;
+  border-radius: 25px; /* rounded corners */
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* animation for smooth transitions */
+}
 
+.btn-prods:hover {
+  background-color: #645c61; /* darker pink on hover */
+  transform: scale(1.1); /* slightly enlarge on hover */
+}
+
+.btn-prods:active {
+  background-color: #4d474b; /* even darker pink when clicked */
+  transform: scale(1); /* return to original size */
+}
 
 
 
@@ -741,7 +767,10 @@ body {
     right: 0;
   }
 
+
 }
+
+
 
 
 
@@ -1171,7 +1200,8 @@ body {
     z-index: -1;
   }
 
-  .footer .shape-1 { left: -100px; }
+  .footer .shape-1 { left: -5px; width: 450px;
+  top: -350px;}
 
   .footer .shape-2 { left: -50px; }
 
@@ -1259,3 +1289,4 @@ body {
   .footer-top .container { padding-inline-start: 20%; }
 
 }
+
