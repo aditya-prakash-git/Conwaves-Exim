@@ -1200,7 +1200,7 @@ body {
     z-index: -1;
   }
 
-  .footer .shape-1 { left: -5px; width: 450px;
+  .footer .shape-1 { left: 10px; width: 350px;
   top: -350px;}
 
   .footer .shape-2 { left: -50px; }
