@@ -252,7 +252,12 @@
   </div>
 
   <script>
-    // Product descriptions as an array of objects
+    "use strict";
+  
+    /**
+     * Product Display Script
+     */
+  
     var productDescriptions = [
       {
         name: 'Raw Honey',
@@ -383,58 +388,58 @@
           <h3>Foxnut</h3>
           <p>🍯 <strong>Relish the Delicacy of Heritage: Our Artisanal Foxnuts!</strong> 🌾</p>
           <p>Discover the Nutty Richness of Our Artisanal Foxnuts! Made with care and tradition, our foxnuts are a wholesome snack that brings the essence of nature straight to your table.</p>
-<p><strong>🌟 What Makes Our Foxnuts Special:</strong></p>
-<ul>
-  <li>100% natural, no preservatives</li>
-  <li>High in protein, fiber, and antioxidants</li>
-  <li>Handpicked and traditionally roasted</li>
-  <li>Sustainably sourced from local farmers</li>
-</ul>
-<p><strong>🍽️ Culinary Versatility:</strong></p>
-<ul>
-  <li>Perfect for a healthy snack</li>
-  <li>Great addition to cereals and salads</li>
-  <li>Ideal for making traditional dishes</li>
-  <li>Crunchy topping for desserts</li>
-</ul>
-<p><strong>🌿 Health Benefits:</strong></p>
-<ul>
-  <li>Supports weight management</li>
-  <li>Improves digestive health</li>
-  <li>Rich source of essential nutrients</li>
-  <li>Helps maintain heart health</li>
-</ul>
-<p><strong>Indulge in the pure, natural taste of our foxnuts – a snack that’s as healthy as it is delicious! 🌰</strong></p>
+          <p><strong>🌟 What Makes Our Foxnuts Special:</strong></p>
+          <ul>
+            <li>100% natural, no preservatives</li>
+            <li>High in protein, fiber, and antioxidants</li>
+            <li>Handpicked and traditionally roasted</li>
+            <li>Sustainably sourced from local farmers</li>
+          </ul>
+          <p><strong>🍽️ Culinary Versatility:</strong></p>
+          <ul>
+            <li>Perfect for a healthy snack</li>
+            <li>Great addition to cereals and salads</li>
+            <li>Ideal for making traditional dishes</li>
+            <li>Crunchy topping for desserts</li>
+          </ul>
+          <p><strong>🌿 Health Benefits:</strong></p>
+          <ul>
+            <li>Supports weight management</li>
+            <li>Improves digestive health</li>
+            <li>Rich source of essential nutrients</li>
+            <li>Helps maintain heart health</li>
+          </ul>
+          <p><strong>Indulge in the pure, natural taste of our foxnuts – a snack that’s as healthy as it is delicious! 🌰</strong></p>
         `
       },
       {
         name: 'Fertilizer',
         description: `
           <h3>Fertilizer</h3>
-<p>🌱 <strong>Nurture Your Plants with the Best: Our Premium Fertilizer! 🌿</strong></p>
-<p>Experience the exceptional quality of our fertilizer, crafted to support healthy and vibrant plant growth. Our fertilizer brings the best of nature's nutrients to your garden, ensuring your plants thrive.</p>
-<p><strong>🌟 What Makes Our Fertilizer Special:</strong></p>
-<ul>
-  <li>100% natural, no chemical additives</li>
-  <li>Rich in essential nutrients and minerals</li>
-  <li>Boosts soil fertility and structure</li>
-  <li>Eco-friendly and sustainably produced</li>
-</ul>
-<p><strong>🍃 Gardening Benefits:</strong></p>
-<ul>
-  <li>Promotes healthy root development</li>
-  <li>Enhances flowering and fruiting</li>
-  <li>Improves plant resilience to pests and diseases</li>
-  <li>Ideal for all types of plants and gardens</li>
-</ul>
-<p><strong>🌿 Environmental Benefits:</strong></p>
-<ul>
-  <li>Supports sustainable agriculture</li>
-  <li>Reduces soil erosion</li>
-  <li>Enhances water retention in soil</li>
-  <li>Minimizes the need for chemical fertilizers</li>
-</ul>
-<p><strong>Give your plants the nourishment they deserve with our premium fertilizer – naturally effective and environmentally friendly! 🌻</strong></p>
+          <p>🌱 <strong>Nurture Your Plants with the Best: Our Premium Fertilizer! 🌿</strong></p>
+          <p>Experience the exceptional quality of our fertilizer, crafted to support healthy and vibrant plant growth. Our fertilizer brings the best of nature's nutrients to your garden, ensuring your plants thrive.</p>
+          <p><strong>🌟 What Makes Our Fertilizer Special:</strong></p>
+          <ul>
+            <li>100% natural, no chemical additives</li>
+            <li>Rich in essential nutrients and minerals</li>
+            <li>Boosts soil fertility and structure</li>
+            <li>Eco-friendly and sustainably produced</li>
+          </ul>
+          <p><strong>🍃 Gardening Benefits:</strong></p>
+          <ul>
+            <li>Promotes healthy root development</li>
+            <li>Enhances flowering and fruiting</li>
+            <li>Improves plant resilience to pests and diseases</li>
+            <li>Ideal for all types of plants and gardens</li>
+          </ul>
+          <p><strong>🌿 Environmental Benefits:</strong></p>
+          <ul>
+            <li>Supports sustainable agriculture</li>
+            <li>Reduces soil erosion</li>
+            <li>Enhances water retention in soil</li>
+            <li>Minimizes the need for chemical fertilizers</li>
+          </ul>
+          <p><strong>Give your plants the nourishment they deserve with our premium fertilizer – naturally effective and environmentally friendly! 🌻</strong></p>
         `
       }
     ];
@@ -469,7 +474,20 @@
   
     // Initialize the first product
     updateProductDisplay(currentProductIndex);
+  
+    /**
+     * MOBILE NAVBAR TOGGLE
+     */
+  
+    const navbar = document.querySelector("[data-navbar]");
+    const navToggler = document.querySelector("[data-nav-toggler]");
+  
+    navToggler.addEventListener("click", function () {
+      navbar.classList.toggle("active");
+      this.classList.toggle("active");
+    });
   </script>
+  
 </body>
 
 </html>
