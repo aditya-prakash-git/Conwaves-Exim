@@ -128,7 +128,7 @@
           <p class="section-subtitle :light" id="work-label" style="margin-top: 50px;">Our Products</p>
           <h2 class="h2 section-title">What we offer</h2>
           <div class="product-card" id="product-card" style="text-align: center;">
-            <figure class="img-holder" style="position: relative; display: inline-block;">
+            <figure class="img-holder" style="position: relative; display: inline-block; max-width: 500px;">
               <img src="./assets/images/honey.jpg" width="350" height="406" alt="Farm Fresh Honey" class="img-cover" style="max-width: 100%; height: auto;">
               <button id="prev-product" class="nav-button">
                 <span class="material-symbols-rounded">arrow_backward</span>
@@ -381,30 +381,60 @@
         name: 'Foxnut',
         description: `
           <h3>Foxnut</h3>
-          <p>🍯 <strong>Savor the Sweetness of Tradition: Our Artisanal Jaggery!</strong> 🌾</p>
-          <p>Experience the rich, complex sweetness of our traditional jaggery. Made from pure sugarcane juice, our jaggery retains all the natural goodness and minerals, offering a healthier alternative to refined sugar.</p>
-          <p><strong>✨ What Makes Our Jaggery Special:</strong></p>
-          <ul>
-            <li>100% natural, no chemical additives</li>
-            <li>Rich in iron, minerals, and antioxidants</li>
-            <li>Traditional production methods</li>
-            <li>Ethically sourced from local farmers</li>
-          </ul>
-          <p><strong>🍽️ Culinary Delights:</strong></p>
-          <ul>
-            <li>Perfect for sweetening beverages</li>
-            <li>Use in traditional desserts</li>
-            <li>Add depth to savory dishes</li>
-            <li>Enjoy as a healthy snack</li>
-          </ul>
-          <p><strong>🌿 Health Benefits:</strong></p>
-          <ul>
-            <li>Aids in digestion</li>
-            <li>Natural energy booster</li>
-            <li>Supports respiratory health</li>
-            <li>Rich in essential minerals</li>
-          </ul>
-          <p><strong>Indulge in the authentic taste of our jaggery – sweetness in its purest form! 🍁</strong></p>
+          <p>🍯 <strong>Relish the Delicacy of Heritage: Our Artisanal Foxnuts!</strong> 🌾</p>
+          <p>Discover the Nutty Richness of Our Artisanal Foxnuts! Made with care and tradition, our foxnuts are a wholesome snack that brings the essence of nature straight to your table.</p>
+<p><strong>🌟 What Makes Our Foxnuts Special:</strong></p>
+<ul>
+  <li>100% natural, no preservatives</li>
+  <li>High in protein, fiber, and antioxidants</li>
+  <li>Handpicked and traditionally roasted</li>
+  <li>Sustainably sourced from local farmers</li>
+</ul>
+<p><strong>🍽️ Culinary Versatility:</strong></p>
+<ul>
+  <li>Perfect for a healthy snack</li>
+  <li>Great addition to cereals and salads</li>
+  <li>Ideal for making traditional dishes</li>
+  <li>Crunchy topping for desserts</li>
+</ul>
+<p><strong>🌿 Health Benefits:</strong></p>
+<ul>
+  <li>Supports weight management</li>
+  <li>Improves digestive health</li>
+  <li>Rich source of essential nutrients</li>
+  <li>Helps maintain heart health</li>
+</ul>
+<p><strong>Indulge in the pure, natural taste of our foxnuts – a snack that’s as healthy as it is delicious! 🌰</strong></p>
+        `
+      },
+      {
+        name: 'Fertilizer',
+        description: `
+          <h3>Fertilizer</h3>
+<p>🌱 <strong>Nurture Your Plants with the Best: Our Premium Fertilizer! 🌿</strong></p>
+<p>Experience the exceptional quality of our fertilizer, crafted to support healthy and vibrant plant growth. Our fertilizer brings the best of nature's nutrients to your garden, ensuring your plants thrive.</p>
+<p><strong>🌟 What Makes Our Fertilizer Special:</strong></p>
+<ul>
+  <li>100% natural, no chemical additives</li>
+  <li>Rich in essential nutrients and minerals</li>
+  <li>Boosts soil fertility and structure</li>
+  <li>Eco-friendly and sustainably produced</li>
+</ul>
+<p><strong>🍃 Gardening Benefits:</strong></p>
+<ul>
+  <li>Promotes healthy root development</li>
+  <li>Enhances flowering and fruiting</li>
+  <li>Improves plant resilience to pests and diseases</li>
+  <li>Ideal for all types of plants and gardens</li>
+</ul>
+<p><strong>🌿 Environmental Benefits:</strong></p>
+<ul>
+  <li>Supports sustainable agriculture</li>
+  <li>Reduces soil erosion</li>
+  <li>Enhances water retention in soil</li>
+  <li>Minimizes the need for chemical fertilizers</li>
+</ul>
+<p><strong>Give your plants the nourishment they deserve with our premium fertilizer – naturally effective and environmentally friendly! 🌻</strong></p>
         `
       }
     ];
@@ -416,7 +446,8 @@
       'Mangoes': './assets/images/mangoes.jpg',
       'Turmeric': './assets/images/raw-turmeric.jpg',
       'Jaggery': './assets/images/jaggery.jpg',
-      'Foxnut': './assets/images/foxnut.jpg'
+      'Foxnut': './assets/images/foxnut.jpg',
+      'Fertilizer': './assets/images/fertilizer.webp'
     };
   
     function updateProductDisplay(index) {
