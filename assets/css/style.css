@@ -557,11 +557,11 @@ body {
   #FOOTER
 \*-----------------------------------*/
 
-.footer { color: var(--international-orange-engineering); }
+.footer { color: var(--eerie-black); }
 
 .footer .shape { display: none; }
 
-.footer-top { background-color: var(--space-cadet); }
+.footer-top { background-color: var(--light-gray); }
 
 .footer-top .container {
   display: grid;
@@ -576,7 +576,7 @@ body {
 }
 
 .social-link {
-  background-color: var(--oxford-blue-3);
+  background-color: var(--white);
   padding: 14px;
   border-radius: var(--radius-circle);
   transition: var(--transition);
@@ -588,12 +588,12 @@ body {
 }
 
 .footer .h3 {
-  color: var(--white);
+  color: var(--eerie-black);
   margin-block-end: 18px;
 }
 
 .footer-list .p {
-  color: var(--white);
+  color: var(--eerie-black);
   font-weight: var(--fw-400);
   margin-block-end: 7px;
 }

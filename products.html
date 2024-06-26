@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="preload" as="image" href="./assets/images/banner.jpg">
   <link rel="preload" as="image" href="./assets/images/herobg.jpg">
-  
+
   <style>
     .popup {
       display: none;
@@ -27,7 +27,7 @@
       width: 100%;
       height: 100%;
       overflow: auto;
-      background-color: rgba(0,0,0,0.4);
+      background-color: rgba(0, 0, 0, 0.4);
     }
 
     .popup-content {
@@ -53,53 +53,73 @@
       text-decoration: none;
       cursor: pointer;
     }
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent; /* Transparent background with some opacity */
+      color: #000000;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      z-index: 100; /* Ensure buttons are above other content */
+      backdrop-filter: blur(5px); /* Apply blur effect to background */
+      border-radius: 20px;
+    }
+
+    .nav-button:hover {
+      background: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+    }
+
+    .nav-button span {
+      font-family: 'Material Symbols Rounded'; /* Assuming you have this font available */
+      font-size: 24px;
+    }
+
+    /* Additional styles for specific buttons */
+    #next-product {
+      right: 10px;
+    }
+
+    #prev-product {
+      left: 10px;
+    }
   </style>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-    
-          <a href="index.html" class="logo">
-            <img src="./assets/images/Conwaves-logo.png" width="128" height="63" alt="cw home">
-          </a>
-    
-          <nav class="navbar" data-navbar>
-            <ul class="navbar-list">
-    
-              <li>
-                <a href="index.html" class="navbar-link">Home</a>
-              </li>
-    
-              <li>
-                <a href="aboutus.html" class="navbar-link">About</a>
-              </li>
-    
-              <li>
-                <a href="services.html" class="navbar-link">Services</a>
-              </li>
-    
-              <li>
-                <a href="#" class="navbar-link">Products</a>
-              </li>
-    
-            </ul>
-          </nav>
-    
-          <a href="getaquote.html" class="btn btn-primary">
-            <span class="span">Get a Quote</span>
-    
-            <span class="material-symbols-rounded">arrow_forward</span>
-          </a>
-    
-          <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
-            <span class="nav-toggle-icon icon-1"></span>
-            <span class="nav-toggle-icon icon-2"></span>
-            <span class="nav-toggle-icon icon-3"></span>
-          </button>
-    
-        </div>
-      </header>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="./assets/images/Conwaves-logo.png" width="128" height="63" alt="cw home">
+      </a>
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li>
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+          <li>
+            <a href="aboutus.html" class="navbar-link">About</a>
+          </li>
+          <li>
+            <a href="services.html" class="navbar-link">Services</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link">Products</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="getaquote.html" class="btn btn-primary">
+        <span class="span">Get a Quote</span>
+        <span class="material-symbols-rounded">arrow_forward</span>
+      </a>
+      <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+        <span class="nav-toggle-icon icon-1"></span>
+        <span class="nav-toggle-icon icon-2"></span>
+        <span class="nav-toggle-icon icon-3"></span>
+      </button>
+    </div>
+  </header>
 
   <main>
     <article>
@@ -107,166 +127,120 @@
         <div class="container">
           <p class="section-subtitle :light" id="work-label" style="margin-top: 50px;">Our Products</p>
           <h2 class="h2 section-title">What we offer</h2>
-          <ul class="has-scrollbar service-list">
-            <li class="scrollbar-item">
-              <div class="work-card" data-product="Raw Honey" id="hon">
-                <figure class="card-banner img-holder">
-                  <img src="./assets/images/honey.jpg" width="350" height="406" loading="lazy" alt="Farm Fresh Honey" class="img-cover">
-                </figure>
-                <div class="card-content">
-                  <p class="card-subtitle">Farm Fresh</p>
-                  <h3 class="h3 card-title">Raw Honey</h3>
-                </div>
-              </div>
-            </li>
-            <li class="scrollbar-item">
-                <div class="work-card" data-product="Mangoes" id="mon">
-                  <figure class="card-banner img-holder">
-                    <img src="./assets/images/mangoes.jpg" width="350" height="406" loading="lazy" alt="Farm Fresh Honey" class="img-cover">
-                  </figure>
-                  <div class="card-content">
-                    <p class="card-subtitle">Taste the tropics</p>
-                    <h3 class="h3 card-title">Mangoes</h3>
-                  </div>
-                </div>
-              </li>
-              <li class="scrollbar-item">
-                <div class="work-card" data-product="Turmeric" id="turm">
-                  <figure class="card-banner img-holder">
-                    <img src="./assets/images/turmeric.jpg" width="350" height="406" loading="lazy" alt="Farm Fresh Honey" class="img-cover">
-                  </figure>
-                  <div class="card-content">
-                    <p class="card-subtitle">Premium Organic</p>
-                    <h3 class="h3 card-title">Turmeric</h3>
-                  </div>
-                </div>
-              </li>
-              <li class="scrollbar-item">
-                <div class="work-card" data-product="Jaggery" id="jag">
-                  <figure class="card-banner img-holder">
-                    <img src="./assets/images/jaggery.jpg" width="350" height="406" loading="lazy" alt="Farm Fresh Honey" class="img-cover">
-                  </figure>
-                  <div class="card-content">
-                    <p class="card-subtitle">Rich in Flavour</p>
-                    <h3 class="h3 card-title">Jaggery</h3>
-                  </div>
-                </div>
-              </li>
-              
-            <!-- Repeat similar structure for other products -->
-          </ul>
+          <div class="product-card" id="product-card" style="text-align: center;">
+            <figure class="img-holder" style="position: relative; display: inline-block;">
+              <img src="./assets/images/honey.jpg" width="350" height="406" alt="Farm Fresh Honey" class="img-cover" style="max-width: 100%; height: auto;">
+              <button id="prev-product" class="nav-button">
+                <span class="material-symbols-rounded">arrow_backward</span>
+              </button>
+              <button id="next-product" class="nav-button">
+                <span class="material-symbols-rounded">arrow_forward</span>
+              </button>
+            </figure>
+            <div class="product-details" style="margin-top: 20px; text-align: left; padding: 10px;">
+              <h3>Raw Honey</h3>
+              <p>🍯 Indulge in the pure essence of nature with our exquisite Raw Honey! 🐝</p>
+              <p>Sourced from diligent beekeepers across diverse landscapes, each golden drop encapsulates the nectar of a thousand blossoms. Its rich, velvety texture and complex flavor profile are a testament to its unadulterated quality.</p>
+              <p>✨ Key Features:</p>
+              <ul style="list-style-type: disc; padding-left: 20px;">
+                <li>100% pure and unprocessed</li>
+                <li>Rich in natural enzymes and antioxidants</li>
+                <li>Harvested from pristine, pesticide-free environments</li>
+                <li>Supports local beekeepers and sustainable practices</li>
+              </ul>
+              <p>🥣 Culinary Delights:</p>
+              <p>Drizzle over yogurt, spread on warm toast, or use as a natural sweetener in your favorite recipes. Our honey adds a touch of nature's sweetness to any dish!</p>
+              <p>💪 Wellness Benefits:</p>
+              <ul style="list-style-type: disc; padding-left: 20px;">
+                <li>Boosts immune system</li>
+                <li>Soothes sore throats</li>
+                <li>Natural energy booster</li>
+                <li>Promotes wound healing</li>
+              </ul>
+              <p>Experience the buzz-worthy difference of our Raw Honey – nature's liquid gold in every jar! 🏆</p>
+            </div>
+          </div>
         </div>
       </section>
     </article>
   </main>
 
   <footer class="footer">
-
     <div class="footer-top section">
       <div class="container">
-
         <div class="footer-brand">
-
           <a href="index.html" class="logo">
             <img src="./assets/images/logo-footer.png" width="128" height="63" alt="CE home">
           </a>
-
           <p class="footer-text">
             Introducing Conwaves Exim LLP, your gateway to premium agricultural exports. Specializing in a diverse range of products.
           </p>
-
           <ul class="social-list">
-
             <li>
               <a href="https://www.facebook.com/conwavesexim" class="social-link">
                 <img src="./assets/images/facebook.svg" alt="facebook">
               </a>
             </li>
-
             <li>
               <a href="https://www.instagram.com/conwavesexim/" class="social-link">
                 <img src="./assets/images/instagram.svg" alt="instagram">
               </a>
             </li>
-
             <li>
               <a href="https://www.linkedin.com/company/conwaves-exim/" class="social-link">
-                <img src="./assets/images/linkedin.svg" alt="twitter">
+                <img src="./assets/images/linkedin.svg" alt="linkedin">
               </a>
             </li>
-
+            <li>
+              <a href="https://x.com/conwavesexim/status/1797582660459724912/photo/1" class="social-link " >
+                <img src="./assets/images/iconmonstr-twitter-1.svg " alt="twitter">
+              </a>
+            </li>
           </ul>
-
         </div>
-
         <ul class="footer-list">
-
           <li>
             <p class="h3">Quick Links</p>
           </li>
-
           <li>
-            <p class="p"> <a href="#">Home</a></p>
+            <p class="p"> <a href="index.html">Home</a></p>
             <p class="p"> <a href="services.html">Services</a></p>
             <p class="p"> <a href="aboutus.html">About</a></p>
-            <p class="p" style="color: cadetblue;"> <a href="getaquote.html">Get A Quote</a></p>
+            <p class="p" style="color: black;"> <a href="getaquote.html">Get A Quote</a></p>
           </li>
-
         </ul>
-
         <ul class="footer-list">
-
           <li>
             <p class="h3">Contact Info</p>
           </li>
-
           <li>
             <a href="tel:+91 9903032434" class="footer-link">
               <span class="material-symbols-rounded">call</span>
-
               <span class="span">+91 9903032434</span>
             </a>
           </li>
-
           <li>
-            <a href="mailto:sales.intl@conwaves.in
-            " class="footer-link">
+            <a href="mailto:sales.intl@conwaves.in" class="footer-link">
               <span class="material-symbols-rounded">mail</span>
-
-              <span class="span">sales.intl@conwaves.in
-              </span>
+              <span class="span">sales.intl@conwaves.in</span>
             </a>
           </li>
-
           <li>
             <address class="footer-link address">
               <span class="material-symbols-rounded">location_on</span>
-
-              <span class="span">
-                Azad Singh Solanki Office, Kh No. 31/24,17,14 & 25, S/F Harijan Basti, Palam Ext, Near Ram Phal Chwok, New Delhi- 110045</span>
+              <span class="span">Palam Ext, Near Ram Phal Chwok, New Delhi- 110045</span>
             </address>
           </li>
-
         </ul>
-
       </div>
-
-      <img src="./assets/images/footer-shape-3.png" width="637" height="173" loading="lazy" alt="Shape"
-        class="shape shape-3 move-anim">
-
+      <img src="./assets/images/footer-shape-3.png" width="637" height="173" loading="lazy" alt="Shape" class="shape shape-3 move-anim">
     </div>
-
     <div class="footer-bottom">
       <div class="container">
-
         <p class="copyright">Copyright © 2024 Conwaves Exim. All rights reserved.</p>
-
-        <img src="./assets/images/logo-footer.png" width="805" height="652" loading="lazy" alt="exim"
-          class="shape shape-1 move-anim">
-
+        <img src="./assets/images/logo-footer.png" width="805" height="652" loading="lazy" alt="exim" class="shape shape-1 move-anim">
       </div>
     </div>
-
   </footer>
 
   <div id="popup" class="popup">
@@ -278,47 +252,193 @@
   </div>
 
   <script>
-    // Get the popup
-    var popup = document.getElementById("popup");
-
-    // Get the <span> element that closes the popup
-    var span = document.getElementsByClassName("close")[0];
-
-    // Get all work cards
-    var workCards = document.querySelectorAll('.work-card');
-
-    // Product descriptions
-    var productDescriptions = {
-      'Raw Honey': '🍯 Indulge in the pure essence of nature with our exquisite Raw Honey! 🐝\n\nSourced from diligent beekeepers across diverse landscapes, each golden drop encapsulates the nectar of a thousand blossoms. Its rich, velvety texture and complex flavor profile are a testament to its unadulterated quality.\n\n✨ Key Features:\n• 100% pure and unprocessed\n• Rich in natural enzymes and antioxidants\n• Harvested from pristine, pesticide-free environments\n• Supports local beekeepers and sustainable practices\n\n🥣 Culinary Delights:\nDrizzle over yogurt, spread on warm toast, or use as a natural sweetener in your favorite recipes. Our honey adds a touch of nature\'s sweetness to any dish!\n\n💪 Wellness Benefits:\n• Boosts immune system\n• Soothes sore throats\n• Natural energy booster\n• Promotes wound healing\n\nExperience the buzz-worthy difference of our Raw Honey – nature\'s liquid gold in every jar! 🏆',
-      'Mangoes': '🥭 Taste the sunshine with our premium, hand-picked Mangoes! 🌞\n\nCultivated in the lush orchards of tropical paradises, our mangoes are a testament to nature\'s perfection. Each fruit is carefully nurtured and harvested at the peak of ripeness to ensure an explosion of flavor in every bite.\n\n🍑 Varieties We Offer:\n• Alphonso: The \King of Mangoes\'n• Kesar: Known for its saffron tinge\n• Langra: Fiberless and aromatic\n• Chaunsa: Sweet and succulent\n\n✨ Why Our Mangoes Stand Out:\n• Ethically sourced from small-scale farmers\n• No artificial ripening agents used\n• Carefully packaged to maintain freshness\n• Rich in vitamins A and C\n\n🍽️ Culinary Inspirations:\n• Slice and enjoy fresh\n• Blend into smoothies or lassis\n• Use in salads or salsas\n• Create exotic desserts\n\n Health Benefits:\n• Boosts immunity\n• Promotes eye health\n• Aids digestion\n• Supports skin health\n\nBring a burst of tropical bliss to your table with our juicy, aromatic mangoes! 🏝️',
-      'Turmeric': 'Our premium turmeric is carefully cultivated and processed to preserve its potent properties. Known for its vibrant color and numerous health benefits, our turmeric adds a golden touch to your culinary creations and wellness routines.',
-      'Jaggery': 'Experience the rich, complex sweetness of our traditional jaggery. Made from pure sugarcane juice, our jaggery retains all the natural goodness and minerals, offering a healthier alternative to refined sugar.',
-      'Other Products': 'Explore our wide range of other high-quality agricultural products. Each item in our diverse portfolio is carefully selected to meet the highest standards of quality and taste.'
+    // Product descriptions as an array of objects
+    var productDescriptions = [
+      {
+        name: 'Raw Honey',
+        description: `
+          <h3>Raw Honey</h3>
+          <p>🍯 <strong>Indulge in the pure essence of nature with our exquisite Raw Honey!</strong> </p>
+          <p>🐝Sourced from diligent beekeepers across diverse landscapes, each golden drop encapsulates the nectar of a thousand blossoms. Its rich, velvety texture and complex flavor profile are a testament to its unadulterated quality.</p>
+          <p><strong>✨ Key Features:</strong></p>
+          <ul>
+            <li>100% pure and unprocessed</li>
+            <li>Rich in natural enzymes and antioxidants</li>
+            <li>Harvested from pristine, pesticide-free environments</li>
+            <li>Supports local beekeepers and sustainable practices</li>
+          </ul>
+          <p><strong>🥣 Culinary Delights:</strong></p>
+          <p>Drizzle over yogurt, spread on warm toast, or use as a natural sweetener in your favorite recipes. Our honey adds a touch of nature's sweetness to any dish!</p>
+          <p><strong>💪 Wellness Benefits:</strong></p>
+          <ul>
+            <li>Boosts immune system</li>
+            <li>Soothes sore throats</li>
+            <li>Natural energy booster</li>
+            <li>Promotes wound healing</li>
+          </ul>
+          <p><strong>Experience the buzz-worthy difference of our Raw Honey – nature's liquid gold in every jar! 🏆</strong></p>
+        `
+      },
+      {
+        name: 'Mangoes',
+        description: `
+          <h3>Mangoes</h3>
+          <p>🥭 <strong>Taste the sunshine with our premium, hand-picked Mangoes!</strong> 🌞</p>
+          <p>Cultivated in the lush orchards of tropical paradises, our mangoes are a testament to nature's perfection. Each fruit is carefully nurtured and harvested at the peak of ripeness to ensure an explosion of flavor in every bite.</p>
+          <p><strong>🍑 Varieties We Offer:</strong></p>
+          <ul>
+            <li>Alphonso: The 'King of Mangoes'</li>
+            <li>Kesar: Known for its saffron tinge</li>
+            <li>Langra: Fiberless and aromatic</li>
+            <li>Chaunsa: Sweet and succulent</li>
+          </ul>
+          <p><strong>✨ Why Our Mangoes Stand Out:</strong></p>
+          <ul>
+            <li>Ethically sourced from small-scale farmers</li>
+            <li>No artificial ripening agents used</li>
+            <li>Carefully packaged to maintain freshness</li>
+            <li>Rich in vitamins A and C</li>
+          </ul>
+          <p><strong>🍽️ Culinary Inspirations:</strong></p>
+          <ul>
+            <li>Slice and enjoy fresh</li>
+            <li>Blend into smoothies or lassis</li>
+            <li>Use in salads or salsas</li>
+            <li>Create exotic desserts</li>
+          </ul>
+          <p><strong>Health Benefits:</strong></p>
+          <ul>
+            <li>Boosts immunity</li>
+            <li>Promotes eye health</li>
+            <li>Aids digestion</li>
+            <li>Supports skin health</li>
+          </ul>
+          <p><strong>Bring a burst of tropical bliss to your table with our juicy, aromatic mangoes! 🏝️</strong></p>
+        `
+      },
+      {
+        name: 'Turmeric',
+        description: `
+          <h3>Turmeric</h3>
+          <p>🌿 <strong>Discover the Golden Spice: Our Premium Turmeric!</strong> ✨</p>
+          <p>Carefully cultivated and processed to preserve its potent properties, our turmeric is a treasure trove of flavor and wellness.</p>
+          <p><strong>🌟 Key Features:</strong></p>
+          <ul>
+            <li>100% organic and sustainably sourced</li>
+            <li>High curcumin content for maximum benefits</li>
+            <li>Vibrant golden color</li>
+            <li>Rich, earthy flavor</li>
+          </ul>
+          <p><strong>🍽️ Culinary Uses:</strong></p>
+          <ul>
+            <li>Add depth to curries and soups</li>
+            <li>Blend into golden milk or tea</li>
+            <li>Use in marinades and rubs</li>
+            <li>Create vibrant rice dishes</li>
+          </ul>
+          <p><strong>🌈 Health Benefits:</strong></p>
+          <ul>
+            <li>Powerful anti-inflammatory properties</li>
+            <li>Antioxidant powerhouse</li>
+            <li>Supports joint health</li>
+            <li>May improve brain function</li>
+            <li>Aids in digestion</li>
+          </ul>
+          <p><strong>Elevate your dishes and well-being with our premium turmeric – nature's golden remedy! 🏅</strong></p>
+        `
+      },
+      {
+        name: 'Jaggery',
+        description: `
+          <h3>Jaggery</h3>
+          <p>🍯 <strong>Savor the Sweetness of Tradition: Our Artisanal Jaggery!</strong> 🌾</p>
+          <p>Experience the rich, complex sweetness of our traditional jaggery. Made from pure sugarcane juice, our jaggery retains all the natural goodness and minerals, offering a healthier alternative to refined sugar.</p>
+          <p><strong>✨ What Makes Our Jaggery Special:</strong></p>
+          <ul>
+            <li>100% natural, no chemical additives</li>
+            <li>Rich in iron, minerals, and antioxidants</li>
+            <li>Traditional production methods</li>
+            <li>Ethically sourced from local farmers</li>
+          </ul>
+          <p><strong>🍽️ Culinary Delights:</strong></p>
+          <ul>
+            <li>Perfect for sweetening beverages</li>
+            <li>Use in traditional desserts</li>
+            <li>Add depth to savory dishes</li>
+            <li>Enjoy as a healthy snack</li>
+          </ul>
+          <p><strong>🌿 Health Benefits:</strong></p>
+          <ul>
+            <li>Aids in digestion</li>
+            <li>Natural energy booster</li>
+            <li>Supports respiratory health</li>
+            <li>Rich in essential minerals</li>
+          </ul>
+          <p><strong>Indulge in the authentic taste of our jaggery – sweetness in its purest form! 🍁</strong></p>
+        `
+      },
+      {
+        name: 'Foxnut',
+        description: `
+          <h3>Foxnut</h3>
+          <p>🍯 <strong>Savor the Sweetness of Tradition: Our Artisanal Jaggery!</strong> 🌾</p>
+          <p>Experience the rich, complex sweetness of our traditional jaggery. Made from pure sugarcane juice, our jaggery retains all the natural goodness and minerals, offering a healthier alternative to refined sugar.</p>
+          <p><strong>✨ What Makes Our Jaggery Special:</strong></p>
+          <ul>
+            <li>100% natural, no chemical additives</li>
+            <li>Rich in iron, minerals, and antioxidants</li>
+            <li>Traditional production methods</li>
+            <li>Ethically sourced from local farmers</li>
+          </ul>
+          <p><strong>🍽️ Culinary Delights:</strong></p>
+          <ul>
+            <li>Perfect for sweetening beverages</li>
+            <li>Use in traditional desserts</li>
+            <li>Add depth to savory dishes</li>
+            <li>Enjoy as a healthy snack</li>
+          </ul>
+          <p><strong>🌿 Health Benefits:</strong></p>
+          <ul>
+            <li>Aids in digestion</li>
+            <li>Natural energy booster</li>
+            <li>Supports respiratory health</li>
+            <li>Rich in essential minerals</li>
+          </ul>
+          <p><strong>Indulge in the authentic taste of our jaggery – sweetness in its purest form! 🍁</strong></p>
+        `
+      }
+    ];
+  
+    var currentProductIndex = 0;
+    var products = productDescriptions.map(product => product.name);
+    var productImages = {
+      'Raw Honey': './assets/images/honey-prod.jpg',
+      'Mangoes': './assets/images/mangoes.jpg',
+      'Turmeric': './assets/images/raw-turmeric.jpg',
+      'Jaggery': './assets/images/jaggery.jpg',
+      'Foxnut': './assets/images/foxnut.jpg'
     };
-
-    // When the user clicks on a work card, open the popup
-    workCards.forEach(function(card) {
-      card.onclick = function() {
-        var productName = this.getAttribute('data-product');
-        document.getElementById("popup-title").textContent = productName;
-        document.getElementById("popup-description").textContent = productDescriptions[productName];
-        popup.style.display = "block";
-      }
-    });
-
-    // When the user clicks on <span> (x), close the popup
-    span.onclick = function() {
-      popup.style.display = "none";
+  
+    function updateProductDisplay(index) {
+      var product = productDescriptions[index];
+      document.querySelector('.product-card img').src = productImages[product.name];
+      document.querySelector('.product-card img').alt = product.name;
+      document.querySelector('.product-details').innerHTML = product.description;
     }
-
-    // When the user clicks anywhere outside of the popup, close it
-    window.onclick = function(event) {
-      if (event.target == popup) {
-        popup.style.display = "none";
-      }
-    }
+  
+    document.getElementById('next-product').onclick = function() {
+      currentProductIndex = (currentProductIndex + 1) % products.length;
+      updateProductDisplay(currentProductIndex);
+    };
+  
+    document.getElementById('prev-product').onclick = function() {
+      currentProductIndex = (currentProductIndex - 1 + products.length) % products.length;
+      updateProductDisplay(currentProductIndex);
+    };
+  
+    // Initialize the first product
+    updateProductDisplay(currentProductIndex);
   </script>
-
-  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
